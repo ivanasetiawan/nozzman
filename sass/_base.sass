@@ -1,0 +1,157 @@
+// Compass imports & mixins
+@import "compass"
+@import "compass/reset"
+
+// Font face
+@font-face
+  font-family: 'lavanderia_delicate'
+  src: url('../fonts/lavanderia_delicate-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_delicate-webfont.woff') format('woff'), url('../fonts/lavanderia_delicate-webfont.ttf') format('truetype'), url('../fonts/lavanderia_delicate-webfont.svg') format('svg')
+  font-style: normal
+
+@font-face
+  font-family: 'lavanderia_regular'
+  src: url('../fonts/lavanderia_regular-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_regular-webfont.woff') format('woff'), url('../fonts/lavanderia_regular-webfont.ttf') format('truetype'), url('../fonts/lavanderia_regular-webfont.svg') format('svg')
+  font-style: normal
+
+@font-face
+  font-family: 'lavanderia_sturdy'
+  src: url('../fonts/lavanderia_sturdy-webfont.eot')
+  src: local('☺'), url('../fonts/lavanderia_sturdy-webfont.woff') format('woff'), url('../fonts/lavanderia_sturdy-webfont.ttf') format('truetype'), url('../fonts/lavanderia_sturdy-webfont.svg') format('svg')
+  font-style: normal
+
+=data-uri-bg($image, $properties: false)
+  @if $properties != false
+    background: inline-image($image) $properties
+    *background: url($image) $properties
+  @else
+    background: inline-image($image)
+    *background: url($image)
+
+=retina-image($image, $ext, $resolution, $properties: false)
+  background: url(../images/#{$image}.#{$ext}) $properties
+  @media only screen and (-webkit-device-pixel-ratio: 2)
+    background: url(../images/#{$image}_2x.#{$ext}) $properties
+    background-size: $resolution
+
+.fleximage
+  max-width: 100%
+  width: 100%
+  height: auto
+
+// Variable
+$fontFamily: 'Enriqueta', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
+$titleFont: 'Enriqueta', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
+$codeFont: 'Oxygen Mono', courier, Sans-Serif
+$fontColor: #39321f
+$altColor: #75b4c2
+$lightColor: #b2cf53
+
+=handWritingLight
+  font-family: 'lavanderia_delicate', $fontFamily
+
+=handWritingReg
+  font-family: 'lavanderia_regular', $fontFamily
+
+=handWritingBold
+  font-family: 'lavanderia_sturdy', $fontFamily
+  text-transform: lowercase
+
+@function bgColor($opacity)
+  @return rgba(225,218,212,$opacity)
+
+::-moz-selection
+  background: $altColor
+  color: #111
+  text-shadow: none
+
+::selection
+  background: $altColor
+  color: #111
+  text-shadow: none
+
+a
+  text-decoration: none
+  color: $altColor
+  border-bottom: dashed 1px $altColor
+
+  &:hover
+    color: $fontColor
+    border-bottom: dashed 1px $fontColor
+
+em
+  font-style: italic
+  +opacity(0.8)
+
+.highlight
+  display: inline-block
+  padding: 0 5px
+  color: $fontColor
+  background: $lightColor
+
+.btn-centered
+  margin: 30px 0
+  text-align: center
+
+.btn
+  display: inline-block
+  padding: 10px 25px 14px
+  font-size: 2.5em
+  border: 0
+  color: #fff
+  background: $lightColor
+  +border-radius(4px)
+
+  &:hover
+    border: 0
+    background: $altColor
+    color: #fff
+
+figure
+  width: 68.5714%
+  margin: 20px auto 30px
+  text-align: center
+
+  &.config
+    width: 39.7143%
+
+  &.compasswatch
+    width: 78.5714%
+
+  &.each
+    width: 82%
+
+  img
+    @extend .fleximage
+    border: solid 5px rgba(0, 0, 0, 0.6)
+
+  figcaption
+    font-size: 1.4em
+
+body
+  font-family: $fontFamily
+  /* The font-size is now 0.625 * 16px = 10px. */
+  font-size: 0.625em
+  /* The leading is now 25 pixels. */
+  line-height: 2.5em
+  color: $fontColor
+  +retina-image("light_toast", "png", 200px 200px, repeat)
+
+.wrap
+  max-width: 700px
+  margin: 0 auto
+
+h3
+  margin: 50px 0 0
+  font-size: 2em
+  font-weight: bold
+  font-family: $titleFont
+
+h2
+  text-align: center
+  margin: 30px 0 25px
+  font-size: 3em
+  font-weight: 700
+  text-decoration: uppercase
+
