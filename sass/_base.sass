@@ -2,25 +2,6 @@
 @import "compass"
 @import "compass/reset"
 
-// Font face
-@font-face
-  font-family: 'lavanderia_delicate'
-  src: url('../fonts/lavanderia_delicate-webfont.eot')
-  src: local('☺'), url('../fonts/lavanderia_delicate-webfont.woff') format('woff'), url('../fonts/lavanderia_delicate-webfont.ttf') format('truetype'), url('../fonts/lavanderia_delicate-webfont.svg') format('svg')
-  font-style: normal
-
-@font-face
-  font-family: 'lavanderia_regular'
-  src: url('../fonts/lavanderia_regular-webfont.eot')
-  src: local('☺'), url('../fonts/lavanderia_regular-webfont.woff') format('woff'), url('../fonts/lavanderia_regular-webfont.ttf') format('truetype'), url('../fonts/lavanderia_regular-webfont.svg') format('svg')
-  font-style: normal
-
-@font-face
-  font-family: 'lavanderia_sturdy'
-  src: url('../fonts/lavanderia_sturdy-webfont.eot')
-  src: local('☺'), url('../fonts/lavanderia_sturdy-webfont.woff') format('woff'), url('../fonts/lavanderia_sturdy-webfont.ttf') format('truetype'), url('../fonts/lavanderia_sturdy-webfont.svg') format('svg')
-  font-style: normal
-
 =data-uri-bg($image, $properties: false)
   @if $properties != false
     background: inline-image($image) $properties
@@ -41,22 +22,11 @@
   height: auto
 
 // Variable
-$fontFamily: 'Enriqueta', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
-$titleFont: 'Enriqueta', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
+$fontFamily: 'Cherry Swash', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
 $codeFont: 'Oxygen Mono', courier, Sans-Serif
-$fontColor: #39321f
-$altColor: #75b4c2
+$fontColor: #362920
+$altColor: #f64b48
 $lightColor: #b2cf53
-
-=handWritingLight
-  font-family: 'lavanderia_delicate', $fontFamily
-
-=handWritingReg
-  font-family: 'lavanderia_regular', $fontFamily
-
-=handWritingBold
-  font-family: 'lavanderia_sturdy', $fontFamily
-  text-transform: lowercase
 
 @function bgColor($opacity)
   @return rgba(225,218,212,$opacity)
@@ -136,7 +106,7 @@ body
   /* The leading is now 25 pixels. */
   line-height: 2.5em
   color: $fontColor
-  +retina-image("light_toast", "png", 200px 200px, repeat)
+  +retina-image("scribble_light", "png", 304px 306px, repeat)
 
 .wrap
   max-width: 700px
@@ -146,7 +116,6 @@ h3
   margin: 50px 0 0
   font-size: 2em
   font-weight: bold
-  font-family: $titleFont
 
 h2
   text-align: center
