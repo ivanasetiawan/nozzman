@@ -11,14 +11,14 @@
 //  font-size: 11em
 //  font-weight: bold
 //  line-height: 1
-//  text-align: center  
+//  text-align: center
 //  cursor: pointer
 //  +hide-text
 //  //+retina-image("logo", "png", 178px 177px, top center no-repeat)
-//  
+//
 //  a
 //    border: 0
-//    color: $fontColor 
+//    color: $fontColor
   //&:hover
   //  +retina-image("bram_grey", "png", 350px 451px, top center no-repeat)
   //  a
@@ -92,18 +92,21 @@
   margin: 20% auto
 
 footer
-  margin-top: 80px !important
-  padding: 30px 30px 20px
-  text-align: center
-  font-size: 0.8em
-  font-style: italic
-  border-top: dashed 1px rgba(0, 0, 0, 0.2)
+  width: 100%
+  position: fixed
+  bottom: 0
+  height: 100px
+  //text-align: center
+  //font-size: 0.8em
+  //font-style: italic
+  //border-top: dashed 1px rgba(0, 0, 0, 0.2)
+  background: url("../images/wave.png") repeat-x
 
 .cloud
   width: 210px
-  height: 100%
+  height: 69px
   position: absolute
-  z-index 1
+  z-index: 1
 
   &.one
     top: 5%
@@ -147,3 +150,12 @@ footer
 
   &.left
     left: 0
+
+.pirate
+  width: 150px
+  height: 382px
+  bottom: 10px
+  right: 20px
+  position: fixed
+  +retina-image("pirate", "png", 150px 382px, no-repeat)
+
