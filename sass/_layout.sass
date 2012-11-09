@@ -1,0 +1,149 @@
+//.mainheader
+//  //min-height: 200px
+//  padding: 30px 0
+//  margin: 30px 0
+//  //background: bgColor(0.6)
+
+//.logo
+//  width: percentage(555px / 900px)
+//  padding-top: 80px
+//  margin: 0 auto 30px
+//  font-size: 11em
+//  font-weight: bold
+//  line-height: 1
+//  text-align: center  
+//  cursor: pointer
+//  +hide-text
+//  //+retina-image("logo", "png", 178px 177px, top center no-repeat)
+//  
+//  a
+//    border: 0
+//    color: $fontColor 
+  //&:hover
+  //  +retina-image("bram_grey", "png", 350px 451px, top center no-repeat)
+  //  a
+  //    color: $altColor
+
+//.content, .intro, footer
+//  p
+//    margin-bottom: 15px
+//    font-size: 1.7em
+//    line-height: 1.7em
+//
+//  .note
+//    font-size: 1.3em
+//
+//.letter
+//  display: inline-block
+//  margin: 11px 8px 0 0
+//  float: left
+//  font-size: 3.5em
+//  font-weight: 500
+//
+//.image-holder
+//  width: 100%
+//  margin: 30px auto 0
+//
+//  img
+//    @extend .fleximage
+
+//.share
+//  width: 330px
+//  margin: 0 auto
+//  padding: 10px 15px 9px 15px
+//  text-align: left
+//  +border-radius(5px)
+//  overflow: hidden
+//  background: rgba(255, 255, 255, 0.8)
+//
+//  > p
+//    margin: 0
+//    float: left
+//    text-align: left
+//    line-height: 31px
+//
+//  > div
+//    width: 90px
+//    float: left
+//    margin: 5px 0 0 10px
+//
+//.floating
+//  width: percentage(500px / 900px)
+//
+//  &.left
+//    float: left
+//
+//  &.right
+//    float: right
+//    text-align: right
+
+.content
+  max-width: 900px
+  height: 100%
+
+.storyline
+  position: relative
+  font-size: 1.6em
+  line-height: 1.5em
+  z-index: 2
+
+.box
+  width: percentage(500px / 900px)
+  margin: 20% auto
+
+footer
+  margin-top: 80px !important
+  padding: 30px 30px 20px
+  text-align: center
+  font-size: 0.8em
+  font-style: italic
+  border-top: dashed 1px rgba(0, 0, 0, 0.2)
+
+.cloud
+  width: 210px
+  height: 100%
+  position: absolute
+  z-index 1
+
+  &.one
+    top: 5%
+    left: 30%
+    background: url("../images/cloud1.png") no-repeat
+
+  &.two
+    top: 15%
+    left: 50%
+    background: url("../images/cloud2.png") no-repeat
+
+  &.three
+    top: 30%
+    left: 90%
+    background: url("../images/cloud2.png") no-repeat
+
+  &.alt
+    left: 10%
+
+.border
+  width: 100%
+  position: fixed
+  border-bottom: solid 10px rgba(54, 41, 32, 0.6)
+
+  &.top
+    top: 0
+
+  &.bottom
+    bottom: 0
+
+  &.right, &.left
+    width: 10px
+    border: 0
+    bottom: 0
+    top: 0
+    margin: 10px 0
+    background: rgba(54, 41, 32, 0.6)
+
+  &.right
+    right: 0
+
+  &.left
+    left: 0
