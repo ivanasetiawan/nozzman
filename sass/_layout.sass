@@ -129,6 +129,7 @@ footer
 .border
   width: 100%
   position: fixed
+  display: none
   border-bottom: solid 10px rgba(54, 41, 32, 0.6)
 
   &.top
@@ -158,4 +159,8 @@ footer
   right: 20px
   position: fixed
   +retina-image("pirate", "png", 150px 382px, no-repeat)
+
+  &.move
+    background: red
+    +retina-image("pirate-1", "gif", 150px 382px, no-repeat)
 
