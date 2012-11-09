@@ -1,85 +1,7 @@
-//.mainheader
-//  //min-height: 200px
-//  padding: 30px 0
-//  margin: 30px 0
-//  //background: bgColor(0.6)
-
-//.logo
-//  width: percentage(555px / 900px)
-//  padding-top: 80px
-//  margin: 0 auto 30px
-//  font-size: 11em
-//  font-weight: bold
-//  line-height: 1
-//  text-align: center
-//  cursor: pointer
-//  +hide-text
-//  //+retina-image("logo", "png", 178px 177px, top center no-repeat)
-//
-//  a
-//    border: 0
-//    color: $fontColor
-  //&:hover
-  //  +retina-image("bram_grey", "png", 350px 451px, top center no-repeat)
-  //  a
-  //    color: $altColor
-
-//.content, .intro, footer
-//  p
-//    margin-bottom: 15px
-//    font-size: 1.7em
-//    line-height: 1.7em
-//
-//  .note
-//    font-size: 1.3em
-//
-//.letter
-//  display: inline-block
-//  margin: 11px 8px 0 0
-//  float: left
-//  font-size: 3.5em
-//  font-weight: 500
-//
-//.image-holder
-//  width: 100%
-//  margin: 30px auto 0
-//
-//  img
-//    @extend .fleximage
-
-//.share
-//  width: 330px
-//  margin: 0 auto
-//  padding: 10px 15px 9px 15px
-//  text-align: left
-//  +border-radius(5px)
-//  overflow: hidden
-//  background: rgba(255, 255, 255, 0.8)
-//
-//  > p
-//    margin: 0
-//    float: left
-//    text-align: left
-//    line-height: 31px
-//
-//  > div
-//    width: 90px
-//    float: left
-//    margin: 5px 0 0 10px
-//
-//.floating
-//  width: percentage(500px / 900px)
-//
-//  &.left
-//    float: left
-//
-//  &.right
-//    float: right
-//    text-align: right
-
 .content
   max-width: 900px
   height: 100%
+  float: left
 
 .storyline
   position: relative
@@ -96,10 +18,6 @@ footer
   position: fixed
   bottom: 0
   height: 100px
-  //text-align: center
-  //font-size: 0.8em
-  //font-style: italic
-  //border-top: dashed 1px rgba(0, 0, 0, 0.2)
   background: url("../images/wave.png") repeat-x
 
 .cloud
@@ -161,6 +79,5 @@ footer
   +retina-image("pirate", "png", 150px 382px, no-repeat)
 
   &.move
-    background: red
-    +retina-image("pirate-1", "gif", 150px 382px, no-repeat)
+    +retina-image("pirate-move", "gif", 150px 382px, no-repeat)
 
