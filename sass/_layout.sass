@@ -1,17 +1,17 @@
 .content
-  max-width: 900px
+  max-width: 800px
   height: 100%
   float: left
+  margin: 2%
+
+  p
+    margin-bottom: 20px
 
 .storyline
   position: relative
   font-size: 1.6em
   line-height: 1.5em
   z-index: 2
-
-.box
-  width: percentage(500px / 900px)
-  margin: 20% auto
 
 footer
   width: 100%
@@ -78,6 +78,12 @@ footer
   position: fixed
   +retina-image("pirate", "png", 150px 382px, no-repeat)
 
-  &.move
-    +retina-image("pirate-move", "gif", 150px 382px, no-repeat)
+  //&.move
+  //  +retina-image("pirate-move", "gif", 150px 382px, no-repeat)
+
+.columns
+  +column-count(2)
+
+
+
 
