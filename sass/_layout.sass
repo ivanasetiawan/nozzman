@@ -1,18 +1,42 @@
+.logo
+  width: 178px
+  height: 177px
+  margin: 30px auto
+  position: relative
+  +hide-text
+  z-index: 2
+  background: url("../images/logo.png") no-repeat
+
 .storyline
+  position: relative
   font-size: 1.6em
   line-height: 1.5em
   z-index: 2
 
 .content
+  margin-bottom: 50px
   p
     margin-bottom: 20px
 
-footer
+.intro
+  position: relative
+
+.waterbox
+  position: relative
+  margin-top: 150px
+  background: url("../images/water.png")
+
+.wave
   width: 100%
-  position: fixed
-  bottom: 0
   height: 100px
-  background: url("../images/wave.png") repeat-x
+  position: absolute
+  top: -100px
+  z-index: 3
+  background: url("../images/wave.png") 0 0 repeat-x
+
+  &.dark
+    z-index: 2
+    background: url("../images/wave-dark.png") -20px 0 repeat-x
 
 .cloud
   width: 210px
@@ -32,7 +56,7 @@ footer
 
   &.three
     top: 30%
-    left: 90%
+    left: 70%
     background: url("../images/cloud2.png") no-repeat
 
   &.alt
@@ -67,13 +91,20 @@ footer
 .pirate
   width: 150px
   height: 382px
-  bottom: 10px
-  right: 20px
-  position: fixed
+  bottom: -145px
+  right: -150px
+  position: absolute
+  z-index: 10
   +retina-image("pirate", "png", 150px 382px, no-repeat)
 
   //&.move
   //  +retina-image("pirate-move", "gif", 150px 382px, no-repeat)
+
+.fish
+  width: 100%
+  height: 100%
+  position: absolute
+  +retina-image("fish-bg", "png", 1000px 400px, center repeat)
 
 .columns
   +column-count(2)
