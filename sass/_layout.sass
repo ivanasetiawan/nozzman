@@ -15,6 +15,7 @@
 
 .content
   margin-bottom: 50px
+
   p
     margin-bottom: 20px
 
@@ -38,55 +39,27 @@
     z-index: 2
     background: url("../images/wave-dark.png") -20px 0 repeat-x
 
-.cloud
-  width: 210px
-  height: 69px
+.clouds
+  top: 0
+  width: 100%
+  height: 572px
   position: absolute
   z-index: 1
-
-  &.one
-    top: 5%
-    left: 30%
-    background: url("../images/cloud1.png") no-repeat
-
-  &.two
-    top: 15%
-    left: 50%
-    background: url("../images/cloud2.png") no-repeat
-
-  &.three
-    top: 30%
-    left: 70%
-    background: url("../images/cloud2.png") no-repeat
-
-  &.alt
-    left: 10%
-
-.border
-  width: 100%
-  position: fixed
-  display: none
-  border-bottom: solid 10px rgba(54, 41, 32, 0.6)
-
-  &.top
-    top: 0
-
-  &.bottom
-    bottom: 0
-
-  &.right, &.left
-    width: 10px
-    border: 0
-    bottom: 0
-    top: 0
-    margin: 10px 0
-    background: rgba(54, 41, 32, 0.6)
-
-  &.right
-    right: 0
-
-  &.left
-    left: 0
+  background: url("../images/clouds.png") -20px 0
+  //&.one
+  //  top: 10%
+  //  left: 30%
+  //  background: url("../images/cloud1.png") no-repeat
+  //&.two
+  //  top: 15%
+  //  left: 30%
+  //  background: url("../images/cloud2.png") no-repeat
+  //&.three
+  //  top: 30%
+  //  left: 60%
+  //  background: url("../images/cloud2.png") no-repeat
+  //&.alt
+  //  left: 10%
 
 .pirate
   width: 150px
@@ -104,7 +77,7 @@
   width: 100%
   height: 100%
   position: absolute
-  +retina-image("fish-bg", "png", 1000px 400px, center repeat)
+  +retina-image("fish-bg", "png", 1000px 400px, bottom center repeat)
 
 .columns
   +column-count(2)

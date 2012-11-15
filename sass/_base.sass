@@ -106,12 +106,27 @@ body
   /* The leading is now 25 pixels. */
   line-height: 2.5em
   color: $fontColor
-  background: url("../images/sky.png") top center repeat-x, url("../images/scribble_light.png") repeat
+  background: url("../images/scribble_light.png") repeat
+
+.sky
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  background: url("../images/sky-blur.png") top center repeat-x
+  //background: url("../images/sky.png") top center repeat-x, url("../images/scribble_light.png") repeat
   //+retina-image("scribble_light", "png", 304px 306px, repeat)
 
 .wrap
   max-width: 700px
   margin: 0 auto
+
+.letter
+  display: inline-block
+  margin: 11px 8px 0 0
+  float: left
+  font-size: 3.5em
+  font-weight: 500
 
 h1, h2, h3
   line-height: 1
