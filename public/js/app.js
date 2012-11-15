@@ -1,12 +1,19 @@
 $(document).ready(function(){
 	keys();
 	//parallax();
+	waveEffect();
 });
 
 var keys = function(){
 	$(document).keydown(function(){
 		$('.pirate').toggleClass('move');
 	});
+}
+
+var waveEffect = function(){
+	$(window).scrollTop(function(){
+	});
+
 }
 
 var parallax = function(){
