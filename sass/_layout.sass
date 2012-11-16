@@ -27,6 +27,11 @@
   margin-top: 150px
   background: url("../images/water.png")
 
+  .content
+    padding: 20px 20px 20px 25px
+    background: rgba(255, 255, 255, 0.7)
+    +border-radius(10px)
+
 .wave
   width: 100%
   height: 100px
@@ -41,8 +46,8 @@
     +animateFunc(wave, 3s, infinite, linear)
 
 .clouds
-  top: 40px
-  width: 100%
+  top: 80px
+  width: 1000px
   height: 572px
   position: absolute
   z-index: 1
