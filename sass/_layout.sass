@@ -37,41 +37,26 @@
 
   &.dark
     z-index: 2
-    background: url("../images/wave-dark.png") -20px 0 repeat-x
+    background: url("../images/wave-dark.png") repeat-x
+    +animateFunc(wave, 3s, infinite, linear)
 
 .clouds
-  top: 0
+  top: 40px
   width: 100%
   height: 572px
   position: absolute
   z-index: 1
-  background: url("../images/clouds.png") -20px 0
-  //&.one
-  //  top: 10%
-  //  left: 30%
-  //  background: url("../images/cloud1.png") no-repeat
-  //&.two
-  //  top: 15%
-  //  left: 30%
-  //  background: url("../images/cloud2.png") no-repeat
-  //&.three
-  //  top: 30%
-  //  left: 60%
-  //  background: url("../images/cloud2.png") no-repeat
-  //&.alt
-  //  left: 10%
+  background: url("../images/clouds.png")
+  +animateFunc(movecloud, 7s, infinite, linear)
 
 .pirate
   width: 150px
   height: 382px
-  bottom: -145px
   right: -150px
   position: absolute
   z-index: 10
   +retina-image("pirate", "png", 150px 382px, no-repeat)
-
-  //&.move
-  //  +retina-image("pirate-move", "gif", 150px 382px, no-repeat)
+  +animateFunc(movepirate, 3s, infinite, linear)
 
 .fish
   width: 100%

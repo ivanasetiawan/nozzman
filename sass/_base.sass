@@ -16,6 +16,116 @@
     background: url(../images/#{$image}_2x.#{$ext}) $properties
     background-size: $resolution
 
+=animateFunc($name, $timing, $count, $timingFunc)
+  animation: $name $timing
+  animation-timing-function: $timingFunc
+
+  /* Firefox */
+  -moz-animation: $name $timing
+  -moz-animation-iteration-count: $count
+  -moz-animation-timing-function: $timingFunc
+
+  /* Safari and Chrome */
+  -webkit-animation: $name $timing
+  -webkit-animation-iteration-count: $count
+  -webkit-animation-timing-function: $timingFunc
+
+  /* Opera */
+  -o-animation: $name $timing
+  -o-animation-iteration-count: $count
+  -o-animation-timing-function: $timingFunc
+
+// Movecloud
+@keyframes movecloud
+  from
+    left: -100%
+  to
+    left: 100%
+
+@-moz-keyframes movecloud
+  from
+    left: -100%
+  to
+    left: 100%
+
+@-webkit-keyframes movecloud
+  from
+    left: -100%
+  to
+    left: 100%
+
+@-o-keyframes movecloud
+  from
+    left: -100%
+  to
+    left: 100%
+
+// Wave
+@keyframes wave
+  from
+    left: 0
+  to
+    top: -103px
+    left: 30px
+    opacity: 0
+
+@-moz-keyframes wave
+  from
+    left: 0
+  to
+    top: -103px
+    left: 30px
+    -moz-opacity: 0
+
+@-webkit-keyframes wave
+  from
+    left: 0
+  to
+    top: -103px
+    left: 30px
+    -webkit-opacity: 0
+
+@-o-keyframes wave
+  from
+    left: 0
+  to
+    top: -103px
+    left: 30px
+    -o-opacity: 0
+
+// Pirate
+@keyframes movepirate
+  from
+    bottom: -145px
+    right: -150px
+  to
+    bottom: -135px
+    right: -155px
+
+@-moz-keyframes movepirate
+  from
+    bottom: -145px
+    right: -150px
+  to
+    bottom: -135px
+    right: -155px
+
+@-webkit-keyframes movepirate
+  from
+    bottom: -145px
+    right: -150px
+  to
+    bottom: -135px
+    right: -155px
+
+@-o-keyframes movepirate
+  from
+    bottom: -145px
+    right: -150px
+  to
+    bottom: -135px
+    right: -155px
+
 .fleximage
   max-width: 100%
   width: 100%
@@ -107,6 +217,7 @@ body
   line-height: 2.5em
   color: $fontColor
   background: url("../images/scribble_light.png") repeat
+  overflow-x: hidden
 
 .sky
   width: 100%
