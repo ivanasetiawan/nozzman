@@ -1,0 +1,22 @@
+@each $prefixes in webkit, moz, o
+  @-#{$prefixes}-keyframes movecloud
+    from
+      left: -100%
+    to
+      left: 100%
+
+  @-#{$prefixes}-keyframes wave
+    from
+      left: 0
+    to
+      top: -3px
+      left: 15px
+      opacity: 0
+
+  @-#{$prefixes}-keyframes movepirate
+    from
+      bottom: -145px
+      right: -150px
+    to
+      bottom: -135px
+      right: -155px
