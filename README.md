@@ -1,4 +1,4 @@
-Notificare!
+Bram van Rijen aka Nozzman
+nozzman.com
 
-This is an article written by I. Setiawan for Notificare app.
-
+Interview done by I. Setiawan in 2012

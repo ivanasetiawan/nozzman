@@ -49,6 +49,30 @@ $fontColor: #362920
 $altColor: #f64b48
 $lightColor: #b2cf53
 
+@font-face
+  font-family: 'iconic'
+  src: url('../fonts/iconic.eot')
+  src: url('../fonts/iconic.eot?#iefix') format('embedded-opentype'), url('../fonts/iconic.svg#iconic') format('svg'), url('../fonts/iconic.woff') format('woff'), url('../fonts/iconic.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before,
+[class*=" icon-"]:before
+  font-family: 'iconic' !important
+  font-style: normal
+  speak: none
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+
+.icon-left-quote:before
+  content: "\e000"
+  margin-right: 3px
+
+.icon-right-quote:before
+  content: "\e001"
+  margin-left: 3px
+
 @function bgColor($opacity)
   @return rgba(225,218,212,$opacity)
 
@@ -153,17 +177,33 @@ body
   font-size: 3.5em
   font-weight: 500
 
+blockquote
+  width: 40%
+  float: left
+  margin: 0 20px 20px 0
+  font-size: 1.1875em
+  line-height: 1.5789em
+  font-style: italic
+
+  span
+    +opacity(0.6)
+
+  &.alt
+    float: right
+    text-align: right
+    margin: 0 0 20px 20px
+
 h1, h2, h3
   line-height: 1
 
 h3
-  margin: 50px 0 0
-  font-size: 2em
+  margin: 30px 0 20px
+  font-size: 1.5em
   font-weight: bold
+  text-align: center
 
 h2
   text-align: center
   margin-bottom: 30px
   font-size: 3em
   font-weight: 700
-  text-decoration: uppercase
