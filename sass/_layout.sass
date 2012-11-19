@@ -22,6 +22,20 @@
 .intro
   position: relative
 
+.window
+  max-width: 100%
+  height: 572px
+  top: 60px
+  z-index: 1
+  position: absolute
+
+.clouds
+  width: 1000px
+  height: 572px
+  position: absolute
+  background: url("../images/clouds.png")
+  +animateFunc(movecloud, 20s, infinite, linear)
+
 .waterbox
   position: relative
   margin-top: 150px
@@ -32,27 +46,25 @@
     background: rgba(255, 255, 255, 0.7)
     +border-radius(10px)
 
+.waves
+  width: 100%
+  height: 100px
+  top: -100px
+  position: absolute
+  overflow: hidden
+
 .wave
   width: 100%
   height: 100px
-  position: absolute
-  top: -100px
+  position: relative
   z-index: 3
   background: url("../images/wave.png") 0 0 repeat-x
 
   &.dark
     z-index: 2
+    position: absolute
     background: url("../images/wave-dark.png") repeat-x
     +animateFunc(wave, 3s, infinite, linear)
-
-.clouds
-  top: 80px
-  width: 1000px
-  height: 572px
-  position: absolute
-  z-index: 1
-  background: url("../images/clouds.png")
-  +animateFunc(movecloud, 20s, infinite, linear)
 
 .pirate
   width: 150px
@@ -60,7 +72,7 @@
   position: absolute
   z-index: 10
   +retina-image("pirate", "png", 150px 382px, no-repeat)
-  +animateFunc(movepirate, 3s, infinite, linear)
+  +animateFunc(movepirate, 3s, infinite, easeOut)
 
 .fish
   width: 100%
@@ -70,7 +82,3 @@
 
 .columns
   +column-count(2)
-
-
-
-
