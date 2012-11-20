@@ -16,31 +16,7 @@
     background: url(../images/#{$image}_2x.#{$ext}) $properties
     background-size: $resolution
 
-=animateFunc($name, $timing, $count, $timingFunc)
-  animation: $name $timing
-  animation-timing-function: $timingFunc
-
-  /* Firefox */
-  -moz-animation: $name $timing
-  -moz-animation-iteration-count: $count
-  -moz-animation-timing-function: $timingFunc
-
-  /* Safari and Chrome */
-  -webkit-animation: $name $timing
-  -webkit-animation-iteration-count: $count
-  -webkit-animation-timing-function: $timingFunc
-
-  /* Opera */
-  -o-animation: $name $timing
-  -o-animation-iteration-count: $count
-  -o-animation-timing-function: $timingFunc
-
 @import "keyframes"
-
-.fleximage
-  max-width: 100%
-  width: 100%
-  height: auto
 
 // Variable
 $fontFamily: 'Cherry Swash', 'Helvetica Neue', Helvetica, Arial, Sans-Serif
@@ -48,33 +24,6 @@ $codeFont: 'Oxygen Mono', courier, Sans-Serif
 $fontColor: #362920
 $altColor: #f64b48
 $lightColor: #b2cf53
-
-@font-face
-  font-family: 'iconic'
-  src: url('../fonts/iconic.eot')
-  src: url('../fonts/iconic.eot?#iefix') format('embedded-opentype'), url('../fonts/iconic.svg#iconic') format('svg'), url('../fonts/iconic.woff') format('woff'), url('../fonts/iconic.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-
-/* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before,
-[class*=" icon-"]:before
-  font-family: 'iconic' !important
-  font-style: normal
-  speak: none
-  font-weight: normal
-  -webkit-font-smoothing: antialiased
-
-.icon-left-quote:before
-  content: "\e000"
-  margin-right: 3px
-
-.icon-right-quote:before
-  content: "\e001"
-  margin-left: 3px
-
-@function bgColor($opacity)
-  @return rgba(225,218,212,$opacity)
 
 ::-moz-selection
   background: $altColor
@@ -85,6 +34,16 @@ $lightColor: #b2cf53
   background: $altColor
   color: #111
   text-shadow: none
+
+@import "icomoon"
+
+@function bgColor($opacity)
+  @return rgba(225,218,212,$opacity)
+
+.fleximage
+  max-width: 100%
+  width: 100%
+  height: auto
 
 a
   text-decoration: none
@@ -97,7 +56,7 @@ a
 
 em
   font-style: italic
-  +opacity(0.8)
+  color: lighten($fontColor, 20%)
 
 .highlight
   display: inline-block
@@ -166,7 +125,7 @@ body
   max-width: 700px
   margin: 0 auto
   position: relative
-  
+
 .window
   width: 100%
   overflow: hidden
@@ -179,17 +138,19 @@ body
   font-weight: 500
 
 blockquote
-  width: 40%
-  float: left
-  margin: 0 20px 20px 0
+  width: 70%
+  margin: 0 auto 20px
   font-size: 1.1875em
   line-height: 1.5789em
   font-style: italic
+  text-align: center
 
   span
-    +opacity(0.6)
+    font-size: 0.8em
+    color: lighten($fontColor, 50%)
 
   &.alt
+    width: 40%
     float: right
     text-align: right
     margin: 0 0 20px 20px
