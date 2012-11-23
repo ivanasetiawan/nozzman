@@ -1,11 +1,17 @@
-.logo
+.logo a
   width: 178px
   height: 177px
+  display: block
   margin: 30px auto
   position: relative
   +hide-text
   z-index: 2
   background: url("../images/logo.png") no-repeat
+  border: 0
+  +transition(all 0.3s)
+
+  &:hover
+    background: url("../images/logo-hover.png") no-repeat
 
 .storyline
   position: relative
@@ -86,6 +92,7 @@
   width: 100%
   height: 100%
   position: absolute
+  display: none
   +retina-image("fish-bg", "png", 1000px 400px, top center repeat)
 
 footer
