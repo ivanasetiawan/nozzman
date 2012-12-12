@@ -1,6 +1,5 @@
 // Compass imports & mixins
 @import "compass"
-@import "compass/reset"
 
 =data-uri-bg($image, $properties: false)
   @if $properties != false
@@ -37,9 +36,6 @@ $lightColor: #b2cf53
 
 @import "icomoon"
 
-@function bgColor($opacity)
-  @return rgba(225,218,212,$opacity)
-
 .fleximage
   max-width: 100%
   width: 100%
@@ -48,7 +44,7 @@ $lightColor: #b2cf53
 a
   text-decoration: none
   color: $altColor
-  border-bottom: dashed 1px $altColor
+  //border-bottom: dashed 1px $altColor
 
   &:hover
     color: $fontColor
@@ -88,24 +84,32 @@ figure
   text-align: center
 
   &.alt
-    width: percentage(300px / 700px)
+    width: percentage(150px / 100px)
     max-height: 234px
     float: left
-    margin: 10px 20px 0 0
-    border: 5px solid rgba(0, 0, 0, 0.2)
+    margin: 0
 
   img
     @extend .fleximage
 
   figcaption
-    font-size: 1.4em
+    font-size: 0.9em
+
+.circle
+  width: 150px
+  height: 150px
+  float: left
+  margin-right: 20px
+  +border-radius(50%)
+  overflow: hidden
+
+  img
+    margin-left: -150px
 
 body
+  margin: 0
   font-family: $fontFamily
-  /* The font-size is now 0.625 * 16px = 10px. */
-  font-size: 0.625em
-  /* The leading is now 25 pixels. */
-  line-height: 2.5em
+  line-height: 1.7em
   color: $fontColor
   background: url("../images/scribble_light.png") repeat
 
@@ -136,7 +140,7 @@ body
 
 blockquote
   width: 70%
-  margin: 0 auto 20px
+  margin: 0 auto 30px
   font-size: 1.1875em
   line-height: 1.5789em
   font-style: italic
@@ -163,6 +167,6 @@ h3
 
 h2
   text-align: center
-  margin-bottom: 30px
+  margin: 20px 0 30px
   font-size: 3em
   font-weight: 700

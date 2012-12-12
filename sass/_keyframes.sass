@@ -1,21 +1,25 @@
-=animateFunc($name, $timing, $count, $timingFunc)
+=animateFunc($name, $timing, $count, $timingFunc, $direction: normal)
   animation: $name $timing
   animation-timing-function: $timingFunc
+  animation-direction: $direction
 
   /* Firefox */
   -moz-animation: $name $timing
   -moz-animation-iteration-count: $count
   -moz-animation-timing-function: $timingFunc
+  -moz-animation-direction: $direction
 
   /* Safari and Chrome */
   -webkit-animation: $name $timing
   -webkit-animation-iteration-count: $count
   -webkit-animation-timing-function: $timingFunc
+  -webkit-animation-direction: $direction
 
   /* Opera */
   -o-animation: $name $timing
   -o-animation-iteration-count: $count
   -o-animation-timing-function: $timingFunc
+  -o-animation-direction: $direction
 
 @each $prefixes in webkit, moz, o
   @-#{$prefixes}-keyframes movecloud
