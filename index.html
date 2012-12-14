@@ -19,6 +19,15 @@
 </head>
 
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=302507796515197";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
 	<div class="sky" data-type="background" data-speed="10"></div>
 	<header class="wrap mainheader">
 		<h1 class="logo"><a href="#">Nozzman!</a></h1>
@@ -121,7 +130,7 @@
 							</li>
 							<li>
 								<h3>Books</h3>
-								<p>Bram doesn't really have a specific book that he would recommend to the readers but his book tip is to "create your own book". Personally I find his suggestion is very simple yet easily forgotten by most artists, it appears that he would like to encourage other (upcoming) artists to start drawing and stop focusing too much on the theory.</p>
+								<p>Bram doesn't really have a specific book that he would recommend to the readers, but his book tip is to "create your own book". Personally I find his suggestion is very simple yet easily forgotten by most artists, it appears that he would like to encourage other (upcoming) artists to start drawing and stop focusing too much on the theory.</p>
 							</li>
 							<li>
 								<h3>Movies</h3>
@@ -150,8 +159,24 @@
 
 			<footer class="wrap">
 				<p>Passionately designed and written by <a href="http://ivanasetiawan.com" target="_blank">I. Setiawan</a>. All Images belong to <a href="http://nozzman.nl" target="_blank">Nozzman</a>.</p>
-			</footer>
 
+				<div class="share" style="overflow: hidden; display: inline-block;">
+					<p style="float: left; margin: 0 10px 0 0;">Show some love:</p>
+					<div style="float: left;">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://t.co/T4ATuXf" data-text="Collection of &quot;Motivational people you should check out&quot; - Nozzman" data-count="none">Tweet</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+					<div style="float: left;">
+						<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fbit.ly%2FNlG6G7&media=http%3A%2F%2Fivanasetiawan.com%2Fprisroos%2Fpublic%2Fimages%2Fchameleon.jpg&description=Pris%20Roos%3A%20prisroos.com" class="pin-it-button" count-layout="none"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+					</div>
+
+					<div style="float: left;">
+						<div class="fb-like" data-href="http://ivanasetiawan.com/nozzman" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+					</div>
+
+				</div>
+
+			</footer>
 		</div> <!-- waterbox ends -->
 	</section>
 
